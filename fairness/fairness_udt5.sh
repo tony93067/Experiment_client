@@ -11,7 +11,7 @@ MSS=("1500" "1250" "1000" "750" "500" "250" "100")
 MSS1=("1500")
 BK=5
 export PATH
-for (( c=1; c<=3; c++ ))
+for (( c=2; c<=2; c++ ))
 do
 	for str in ${MSS1[@]}
 	do
@@ -26,6 +26,8 @@ do
 		./udtclient 140.117.171.182 5050 $str $c $BK
 		killall -9 background_client_downlink
 		sleep 40
+		killall -9 udtclient
+		ps
 	done
 	
 done

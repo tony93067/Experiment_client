@@ -17,11 +17,14 @@ do
 		export LD_LIBRARY_PATH=$LB_PATH1
 		cd $UDT_PATH1
 		./udtclient 140.117.171.182 5000 $str $c $BK &
+		date
 		export LD_LIBRARY_PATH=$LB_PATH2
 		cd $UDT_PATH2
 		./udtclient 140.117.171.182 5050 $str $c $BK
+		date
+		sleep 60
 		killall -9 udtclient
-		sleep 40
+		ps
 	done
 	
 done

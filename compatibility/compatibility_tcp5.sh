@@ -16,5 +16,6 @@ cd $TCP_PATH2
 ./client 140.117.171.182 $BK "bbr"
 killall -9 background_client_downlink
 killall -9 client
+ps
 	
 

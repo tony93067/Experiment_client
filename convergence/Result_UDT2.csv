@@ -1,0 +1,58 @@
+Method,UDT
+BK TCP Number,0
+Throughput(Mb/s),12.7831
+,
+,
+Method,CTCP
+BK TCP Number,0
+Throughput(Mb/s),1.01382
+,
+,
+Method,CBiCTCP
+BK TCP Number,0
+Throughput(Mb/s),6.28445
+,
+,
+Method,UDT
+BK TCP Number,3
+Throughput(Mb/s),12.7714
+,
+,
+Method,CTCP
+BK TCP Number,3
+Throughput(Mb/s),0.400882
+,
+,
+Method,CBiCTCP
+BK TCP Number,3
+Throughput(Mb/s),1.08445
+,
+,
+Method,UDT
+BK TCP Number,5
+Throughput(Mb/s),10.6905
+,
+,
+Method,CTCP
+BK TCP Number,5
+Throughput(Mb/s),0.126931
+,
+,
+Method,CBiCTCP
+BK TCP Number,5
+Throughput(Mb/s),0.427375
+,
+,
+Method,UDT
+BK TCP Number,10
+Throughput(Mb/s),13.1341
+,
+,
+Method,CTCP
+BK TCP Number,10
+Throughput(Mb/s),0.104277
+,
+,
+Method,CBiCTCP
+BK TCP Number,10
+Throughput(Mb/s),0.236745

@@ -412,11 +412,7 @@ int main(int argc, char* argv[])
      // close file
     close(fd);
     //finish time
-    if((new_time = times(&time_end)) == -1)
-    {
-        printf("time error\n");
-        exit(1);
-    }
+    
     /*memset(buffer, '\0', sizeof(buffer));
     if(UDT::ERROR == (ss = UDT::recv(client_data, (char *)buffer, sizeof(buffer), 0))) 
     {
@@ -430,7 +426,7 @@ int main(int argc, char* argv[])
     //         cout << "send:" << UDT::getlasterror().getErrorMessage() << endl;
     //         exit(1);
     //     }
-    close_connection();     
+    //close_connection();     
     // }
     return 1;
 }
@@ -441,13 +437,15 @@ void close_connection()
     ticks = sysconf(_SC_CLK_TCK);
     printf("\n[Close Connection]\n");
 
-    execute_time = (double)(new_time - old_time)/ticks; 
+    execute_time = (double)(new_time - old_time)/ticks;
+    printf("Execute time : %2.2f\n", execute_time); 
     
     //sprintf(str, "UDT\nMss: %d\nTotal Execute Time (sec) : %f\n\n", mss, execute_time);
     
     // write info and close file
     fout << "Method," << method << endl;
     fout << "BK TCP Number," << background_TCP_number << endl;
+    fout << "Total Receive Data(MB), " << total_recv_size/1000000 << endl;
     fout << "Throughput(Mb/s)," << total_recv_size*8/1000000/execute_time << endl;
     fout << endl << endl;
     fout.close();
@@ -467,7 +465,7 @@ void close_connection()
     */
     //if(ss_control_data3 > 0)
     //{
-    cout << "END connection" << endl;
+    cout << "UDT2 END connection" << endl;
     pthread_join(t1, NULL);
     UDT::close(client_control);
     UDT::close(client_data);
@@ -570,8 +568,15 @@ DWORD WINAPI monitor(LPVOID s)
         if(monitor_time >= 300)
             break;
     }
+    printf("UDT 2 monitor finish\n");
+    if((new_time = times(&time_end)) == -1)
+    {
+        printf("time error\n");
+        exit(1);
+    }
     fout << endl << endl;
     fout.close();
+    close_connection();
     #ifndef WIN32
         return NULL;
     #else

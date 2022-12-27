@@ -19,6 +19,8 @@ do
 	./client 140.117.171.182 $BK $me
 	killall -9 background_client_downlink
 	sleep 40
+	killall -9 client
+	ps
 done
 	
 

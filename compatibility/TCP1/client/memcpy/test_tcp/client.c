@@ -31,7 +31,7 @@ double total_recv_size = 0;
 int t = 0;
 void* timer(void* arg)
 {
-    int ex = open("TCP_Receiver.csv", O_CREAT|O_RDWR|O_APPEND, S_IRWXU);
+    int ex = open("TCP_Receiver1.csv", O_CREAT|O_RDWR|O_APPEND, S_IRWXU);
 	printf("timer create\n");
     while(1)
     {
@@ -47,7 +47,7 @@ void* timer(void* arg)
             ticks = sysconf(_SC_CLK_TCK);
             double execute_time = (new_time - old_time) / ticks;
             printf("Execute time : %2.2f\n", execute_time);
-            printf("Total Recv Size : %lf\n", total_recv_size);
+            printf("CUBIC Total Recv Size : %lf\n", total_recv_size);
 
             char str[100] = {0};
             sprintf(str, "%s\n", "TCP");

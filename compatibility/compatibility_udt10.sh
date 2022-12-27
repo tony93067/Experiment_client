@@ -11,7 +11,7 @@ Method=("UDT" "CTCP" "BiCTCP")
 MSS1=("1500")
 BK=10
 export PATH
-for (( c=1; c<=3; c++ ))
+for (( c=3; c<=3; c++ ))
 do
 	for str in ${MSS1[@]}
 	do
@@ -24,10 +24,10 @@ do
 		cd $UDT_PATH1
 		./udtclient 140.117.171.182 5000 $str $c $BK
 		killall -9 background_client_downlink
-		ps
 		sleep 40
 		killall -9 client
 		killall -9 udtclient
+		ps
 	done
 	
 done

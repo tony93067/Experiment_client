@@ -19,10 +19,10 @@ do
 		export LD_LIBRARY_PATH=$LB_PATH1
 		cd $UDT_PATH1
 		./udtclient 140.117.171.182 5000 $str $c $BK
-		ps
 		sleep 40
 		killall -9 client
 		killall -9 udtclient
+		ps
 	done
 	
 done

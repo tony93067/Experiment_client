@@ -26,6 +26,8 @@ do
 		./udtclient 140.117.171.182 5050 $str $c $BK
 		killall -9 background_client_downlink
 		sleep 40
+		killall -9 udtclient
+		ps
 	done
 	
 done

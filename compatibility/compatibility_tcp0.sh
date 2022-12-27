@@ -11,5 +11,6 @@ cd $TCP_PATH1
 cd $TCP_PATH2
 ./client 140.117.171.182 0 "bbr"
 killall -9 client
+ps
 	
 

@@ -1,0 +1,32 @@
+Method,CTCP
+BK TCP Number,3
+Total Receive Data(MB),234.212
+Throughput(Mb/s),6.24188
+,
+,
+Method,CBiCTCP
+BK TCP Number,3
+Total Receive Data(MB),186.739
+Throughput(Mb/s),4.97534
+Method,CTCP
+BK TCP Number,5
+Total Receive Data(MB),171.6
+Throughput(Mb/s),4.57227
+Method,CBiCTCP
+BK TCP Number,5
+Total Receive Data(MB), 75.8692
+Throughput(Mb/s),2.01946
+
+
+Method,CTCP
+BK TCP Number,10
+Total Receive Data(MB), 5.11056
+Throughput(Mb/s),0.133298
+
+
+Method,CBiCTCP
+BK TCP Number,10
+Total Receive Data(MB), 15.6258
+Throughput(Mb/s),0.416569
+
+

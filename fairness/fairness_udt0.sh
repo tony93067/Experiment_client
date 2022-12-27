@@ -21,7 +21,7 @@ do
 		cd $UDT_PATH2
 		./udtclient 140.117.171.182 5050 $str $c $BK
 		sleep 40
-		killall -9 udtclient
+		ps
 	done
 	
 done
